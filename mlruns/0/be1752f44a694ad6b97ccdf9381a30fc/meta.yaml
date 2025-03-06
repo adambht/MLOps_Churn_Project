@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/be1752f44a694ad6b97ccdf9381a30fc/artifacts
+end_time: 1741296900486
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: be1752f44a694ad6b97ccdf9381a30fc
+run_name: thoughtful-mouse-786
+run_uuid: be1752f44a694ad6b97ccdf9381a30fc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296897872
+status: 3
+tags: []
+user_id: adambht

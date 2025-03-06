@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e7871494feee4044a0584de5f368bc76/artifacts
+end_time: 1741300202450
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e7871494feee4044a0584de5f368bc76
+run_name: tasteful-steed-929
+run_uuid: e7871494feee4044a0584de5f368bc76
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741300202419
+status: 3
+tags: []
+user_id: adambht

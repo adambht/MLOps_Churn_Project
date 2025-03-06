@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/54c0a5b2c73440f7b60308c1f9cb263e/artifacts
+end_time: 1741296895604
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 54c0a5b2c73440f7b60308c1f9cb263e
+run_name: nervous-lamb-139
+run_uuid: 54c0a5b2c73440f7b60308c1f9cb263e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296895267
+status: 3
+tags: []
+user_id: adambht

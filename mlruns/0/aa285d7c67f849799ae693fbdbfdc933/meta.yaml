@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/aa285d7c67f849799ae693fbdbfdc933/artifacts
+end_time: 1741299142205
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aa285d7c67f849799ae693fbdbfdc933
+run_name: nosy-goat-484
+run_uuid: aa285d7c67f849799ae693fbdbfdc933
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741299141932
+status: 3
+tags: []
+user_id: adambht

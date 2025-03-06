@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/087c58def2c24383997b880837931677/artifacts
+end_time: 1741297759024
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 087c58def2c24383997b880837931677
+run_name: adorable-stag-723
+run_uuid: 087c58def2c24383997b880837931677
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741297758699
+status: 3
+tags: []
+user_id: adambht

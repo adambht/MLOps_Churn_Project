@@ -1,8 +1,3 @@
-"""
-Main module for the ML pipeline.
-Handles command-line arguments and orchestrates the pipeline execution.
-"""
-
 from model_pipeline import (
     prepare_data,
     train_model,
@@ -12,28 +7,24 @@ from model_pipeline import (
     predict_with_mlflow,
 )
 import argparse
-import os
-import json
 import joblib
-import pandas as pd  # ✅ Correction : Importer Pandas
 import numpy as np
 
 
 def main():
-    """
-    Main function that parses command-line arguments and executes the ML pipeline steps.
-    Supports data preparation, model training, model evaluation, and deployment.
-    """
     parser = argparse.ArgumentParser()
-    parser.add_argument("--prepare", action="store_true", help="Prepare the data")
-    parser.add_argument("--train", action="store_true", help="Train the model")
-    parser.add_argument("--evaluate", action="store_true", help="Evaluate the model")
-    parser.add_argument("--deploy", action="store_true", help="Deploy the model")
-    parser.add_argument(
-        "--predict", action="store_true", help="Make a prediction using MLflow"
-    )  # ✅ Ajout prédiction
+    parser.add_argument("--prepare", action="store_true")
+    parser.add_argument("--train", action="store_true")
+    parser.add_argument("--evaluate", action="store_true")
+    parser.add_argument("--deploy", action="store_true")
+    parser.add_argument("--predict", action="store_true")
 
     args = parser.parse_args()
+
+    if args.prepare:
+        x_train, x_test, y_train, y_test, scaler = prepare_data()
+        joblib.dump((x_train, x_test, y_train, y_test, scaler), "prepared_data.joblib")
+        print("✅ Data prepared.")
 
     if args.prepare:
         x_train, x_test, y_train, y_test, scaler = prepare_data()

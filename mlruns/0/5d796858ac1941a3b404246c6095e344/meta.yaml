@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5d796858ac1941a3b404246c6095e344/artifacts
+end_time: 1741298830081
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5d796858ac1941a3b404246c6095e344
+run_name: fearless-foal-507
+run_uuid: 5d796858ac1941a3b404246c6095e344
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298829763
+status: 3
+tags: []
+user_id: adambht

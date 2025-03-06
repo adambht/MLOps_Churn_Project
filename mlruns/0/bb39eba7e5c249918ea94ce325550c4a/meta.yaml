@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/bb39eba7e5c249918ea94ce325550c4a/artifacts
+end_time: 1741298835555
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bb39eba7e5c249918ea94ce325550c4a
+run_name: nervous-dog-152
+run_uuid: bb39eba7e5c249918ea94ce325550c4a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298832740
+status: 3
+tags: []
+user_id: adambht

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/eb995e361c5a476a94cc4e9cb708137a/artifacts
+end_time: 1741299287556
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eb995e361c5a476a94cc4e9cb708137a
+run_name: victorious-worm-115
+run_uuid: eb995e361c5a476a94cc4e9cb708137a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741299287250
+status: 3
+tags: []
+user_id: adambht

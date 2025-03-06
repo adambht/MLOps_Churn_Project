@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/42722c9e05644c2cbd21d5d8e6012730/artifacts
+end_time: 1741296900561
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 42722c9e05644c2cbd21d5d8e6012730
+run_name: clumsy-boar-810
+run_uuid: 42722c9e05644c2cbd21d5d8e6012730
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296900530
+status: 3
+tags: []
+user_id: adambht

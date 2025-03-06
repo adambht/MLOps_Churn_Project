@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/546ae640a4d646a3bd4091234a6bbb07/artifacts
+end_time: 1741296903784
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 546ae640a4d646a3bd4091234a6bbb07
+run_name: masked-gnat-690
+run_uuid: 546ae640a4d646a3bd4091234a6bbb07
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296903410
+status: 3
+tags: []
+user_id: adambht

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5bb5b81d5dca4f588c5c8c3252045378/artifacts
+end_time: 1741297763102
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5bb5b81d5dca4f588c5c8c3252045378
+run_name: grandiose-mare-303
+run_uuid: 5bb5b81d5dca4f588c5c8c3252045378
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741297762845
+status: 3
+tags: []
+user_id: adambht

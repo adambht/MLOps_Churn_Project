@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/76fbc4983fd94789b597202bb4363b8b/artifacts
+end_time: 1741298838506
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 76fbc4983fd94789b597202bb4363b8b
+run_name: secretive-pig-441
+run_uuid: 76fbc4983fd94789b597202bb4363b8b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298838173
+status: 3
+tags: []
+user_id: adambht

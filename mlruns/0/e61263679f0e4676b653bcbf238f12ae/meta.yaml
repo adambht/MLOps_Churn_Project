@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e61263679f0e4676b653bcbf238f12ae/artifacts
+end_time: 1741299134958
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e61263679f0e4676b653bcbf238f12ae
+run_name: able-hawk-31
+run_uuid: e61263679f0e4676b653bcbf238f12ae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741299132328
+status: 3
+tags: []
+user_id: adambht

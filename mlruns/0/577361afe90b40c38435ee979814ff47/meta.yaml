@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/577361afe90b40c38435ee979814ff47/artifacts
+end_time: 1741300205151
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 577361afe90b40c38435ee979814ff47
+run_name: rambunctious-ant-850
+run_uuid: 577361afe90b40c38435ee979814ff47
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741300204836
+status: 3
+tags: []
+user_id: adambht

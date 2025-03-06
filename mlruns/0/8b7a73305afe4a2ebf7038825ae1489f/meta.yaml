@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8b7a73305afe4a2ebf7038825ae1489f/artifacts
+end_time: 1741299284790
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8b7a73305afe4a2ebf7038825ae1489f
+run_name: whimsical-stoat-491
+run_uuid: 8b7a73305afe4a2ebf7038825ae1489f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741299282219
+status: 3
+tags: []
+user_id: adambht

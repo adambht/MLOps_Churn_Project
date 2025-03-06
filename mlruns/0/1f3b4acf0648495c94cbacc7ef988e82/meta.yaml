@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/1f3b4acf0648495c94cbacc7ef988e82/artifacts
+end_time: 1741297756616
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1f3b4acf0648495c94cbacc7ef988e82
+run_name: rogue-koi-316
+run_uuid: 1f3b4acf0648495c94cbacc7ef988e82
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741297756589
+status: 3
+tags: []
+user_id: adambht

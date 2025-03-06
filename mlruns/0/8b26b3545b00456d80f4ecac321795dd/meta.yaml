@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8b26b3545b00456d80f4ecac321795dd/artifacts
+end_time: 1741296908490
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8b26b3545b00456d80f4ecac321795dd
+run_name: handsome-jay-616
+run_uuid: 8b26b3545b00456d80f4ecac321795dd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296908195
+status: 3
+tags: []
+user_id: adambht

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a93b491588c74862bdac6e66d750f2da/artifacts
+end_time: 1741300202376
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a93b491588c74862bdac6e66d750f2da
+run_name: aged-ox-144
+run_uuid: a93b491588c74862bdac6e66d750f2da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741300199775
+status: 3
+tags: []
+user_id: adambht

@@ -1,10 +1,8 @@
-import mlflow
 import mlflow.sklearn
+import os
 import joblib
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from imblearn.combine import SMOTEENN
@@ -24,7 +22,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Set the MLflow tracking URI
-mlflow.set_tracking_uri("http://127.0.0.1:5002")
+mlflow.set_tracking_uri("http://127.0.0.1:5003")
 
 
 def prepare_data(data_path="churn_combined.csv"):
@@ -77,72 +75,78 @@ def train_model(x_train, y_train):
 
 
 def evaluate_model(model, x_test, y_test):
-    # Make predictions
-    mlflow.set_tag("stage", "Model Evaluation")
-    y_pred = model.predict(x_test)
-    y_pred_proba = model.predict_proba(x_test)[:, 1]  # For ROC AUC
+    # Ensure the run is active
+    with mlflow.start_run():
+        mlflow.set_tag("stage", "Model Evaluation")
 
-    # Calculate metrics
-    accuracy = accuracy_score(y_test, y_pred)
-    precision = precision_score(y_test, y_pred)
-    recall = recall_score(y_test, y_pred)
-    f1 = f1_score(y_test, y_pred)
-    roc_auc = roc_auc_score(y_test, y_pred_proba)
+        # Make predictions
+        y_pred = model.predict(x_test)
+        y_pred_proba = model.predict_proba(x_test)[:, 1]  # For ROC AUC
 
-    # Log all metrics in MLflow
-    mlflow.log_metric("accuracy", accuracy)
-    mlflow.log_metric("precision", precision)
-    mlflow.log_metric("recall", recall)
-    mlflow.log_metric("f1_score", f1)
-    mlflow.log_metric("roc_auc", roc_auc)
+        # Calculate metrics
+        accuracy = accuracy_score(y_test, y_pred)
+        precision = precision_score(y_test, y_pred)
+        recall = recall_score(y_test, y_pred)
+        f1 = f1_score(y_test, y_pred)
+        roc_auc = roc_auc_score(y_test, y_pred_proba)
 
-    # Generate and log confusion matrix
-    cm = confusion_matrix(y_test, y_pred)
+        # Log all metrics in MLflow
+        mlflow.log_metric("accuracy", accuracy)
+        mlflow.log_metric("precision", precision)
+        mlflow.log_metric("recall", recall)
+        mlflow.log_metric("f1_score", f1)
+        mlflow.log_metric("roc_auc", roc_auc)
 
-    # Create confusion matrix plot
-    plt.figure(figsize=(10, 8))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
-    plt.title("Confusion Matrix")
-    plt.ylabel("Actual Label")
-    plt.xlabel("Predicted Label")
+        # Generate and log confusion matrix
+        cm = confusion_matrix(y_test, y_pred)
 
-    # Save confusion matrix as figure
-    conf_matrix_path = "confusion_matrix.png"
-    plt.tight_layout()
-    plt.savefig(conf_matrix_path)
-    plt.close()
+        # Create confusion matrix plot
+        plt.figure(figsize=(10, 8))
+        sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
+        plt.title("Confusion Matrix")
+        plt.ylabel("Actual Label")
+        plt.xlabel("Predicted Label")
 
-    # Log the figure in MLflow
-    mlflow.log_artifact(conf_matrix_path)
+        # Save confusion matrix as figure
+        conf_matrix_path = "confusion_matrix.png"
+        plt.tight_layout()
+        plt.savefig(conf_matrix_path)
+        plt.close()
 
-    # Generate classification report and log as text
-    report = classification_report(y_test, y_pred)
-    with open("classification_report.txt", "w") as f:
-        f.write(report)
-    mlflow.log_artifact("classification_report.txt")
+        # Log the figure in MLflow
+        mlflow.log_artifact(conf_matrix_path)
 
-    # Print summary
-    print(f"Accuracy: {accuracy:.4f}")
-    print(f"Precision: {precision:.4f}")
-    print(f"Recall: {recall:.4f}")
-    print(f"F1 Score: {f1:.4f}")
-    print(f"ROC AUC: {roc_auc:.4f}")
-    print("\nConfusion Matrix:")
-    print(cm)
-    print("\nClassification Report:")
-    print(report)
+        # Generate classification report and log as text
+        report = classification_report(y_test, y_pred)
+        with open("classification_report.txt", "w") as f:
+            f.write(report)
+        mlflow.log_artifact("classification_report.txt")
 
-    return accuracy
+        # Print summary
+        print(f"Accuracy: {accuracy:.4f}")
+        print(f"Precision: {precision:.4f}")
+        print(f"Recall: {recall:.4f}")
+        print(f"F1 Score: {f1:.4f}")
+        print(f"ROC AUC: {roc_auc:.4f}")
+        print("\nConfusion Matrix:")
+        print(cm)
+        print("\nClassification Report:")
+        print(report)
+
+        return accuracy
 
 
 def save_model(model, model_path="models/model.pkl"):
+    os.makedirs(
+        os.path.dirname(model_path), exist_ok=True
+    )  # Crée le dossier s'il n'existe pas
     joblib.dump(model, model_path)
     mlflow.log_artifact(model_path)
     print("Model saved successfully.")
 
+
 def load_model(file_path):
     return joblib.load(file_path)
-
 
 
 def predict_with_mlflow(model_uri, input_data):

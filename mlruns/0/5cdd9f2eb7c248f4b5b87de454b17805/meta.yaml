@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5cdd9f2eb7c248f4b5b87de454b17805/artifacts
+end_time: 1741296645101
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5cdd9f2eb7c248f4b5b87de454b17805
+run_name: intelligent-ray-802
+run_uuid: 5cdd9f2eb7c248f4b5b87de454b17805
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296645068
+status: 3
+tags: []
+user_id: adambht

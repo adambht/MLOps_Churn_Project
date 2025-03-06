@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/de554042405f400fbf05ed231e116860/artifacts
+end_time: 1741299279758
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: de554042405f400fbf05ed231e116860
+run_name: rogue-cat-130
+run_uuid: de554042405f400fbf05ed231e116860
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741299279459
+status: 3
+tags: []
+user_id: adambht

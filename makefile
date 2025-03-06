@@ -55,6 +55,7 @@ clean:
 	@echo "🆗 Cleaning completed."
 	@echo ""
 
+
 # STEP 3 : VENV + INSTALLATION:
 setup:
 	@echo ""
@@ -63,6 +64,10 @@ setup:
 	@$(VENV)/bin/pip install --upgrade pip
 	@$(VENV)/bin/pip install -r $(REQUIREMENTS)
 	@echo "🆗 Setup completed."
+	@echo ""
+	@echo "[flake8]" > .flake
+	@echo "max-line-length = 90" >> .flake
+	@echo "🆗 .flake file created with max-line-length = 90."
 	@echo ""
 
 # STEP 5 : Check code quality, formatting, security:
@@ -81,6 +86,10 @@ data:
 	@echo "🔵 [STEP 6] Preparing data:"
 	@bash -c "source $(ACTIVATE) && $(PYTHON) main.py --prepare"
 	@echo "🆗 Data prepared."
+	@echo ""
+	@echo "Starting MLflow UI server:"
+	# @mlflow ui --host 127.0.0.1 --port 5001 &
+	@echo "🆗 MLflow UI server started at http://localhost:5003"
 	@echo ""
 
 # STEP 7 : Train the model:

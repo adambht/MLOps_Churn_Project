@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/55ee6a0cc01c486b91e7f8c4d75d9b61/artifacts
+end_time: 1741298843152
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 55ee6a0cc01c486b91e7f8c4d75d9b61
+run_name: dapper-wolf-30
+run_uuid: 55ee6a0cc01c486b91e7f8c4d75d9b61
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298842854
+status: 3
+tags: []
+user_id: adambht
